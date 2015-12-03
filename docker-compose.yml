@@ -1,0 +1,8 @@
+web:
+    image: python:onbuild
+    ports:
+        - "5000:5000"
+    volumes:
+        - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh init.sh

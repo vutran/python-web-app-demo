@@ -1,0 +1,33 @@
+<!DOCTYPE hmtl>
+<head>
+<title>{{ page_title }}</title>
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/styles.css') }}" />
+{% endblock %}
+</head>
+
+<body>
+
+{% block header %}
+    <header class="header">
+        <div class="logo">MY LOGO</div>
+        <menu class="menu">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </menu>
+    </header>
+{% endblock %}
+
+<div class="body-content">
+    {% block body_content %}{% endblock %}
+</div>
+
+{% block footer %}
+    <footer class="footer">
+        &copy; 2015. Vu Tran.
+    </footer>
+{% endblock %}
+
+</body>
+</html>
